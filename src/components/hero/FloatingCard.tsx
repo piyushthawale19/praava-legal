@@ -77,7 +77,7 @@ export function FloatingCard(props: FloatingCardProps) {
     const { rotation, avatarSrc, title, message, meta, className = "", style } = props;
     return (
       <div
-        className={`flex items-center gap-[12px] rounded-[40px] bg-[#938ce2] px-[14px] py-[12px] text-[#1F1F1F] shadow-[0_12px_30px_rgba(140,120,180,0.2)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_32px_-4px_rgba(140,120,180,0.3)] dark:bg-[#3d3552] dark:text-[#e0ddf0] dark:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)] ${className}`}
+        className={`pointer-events-auto cursor-pointer flex items-center gap-[12px] rounded-[40px] bg-[#938ce2] px-[14px] py-[12px] text-[#1F1F1F] shadow-[0_12px_30px_rgba(140,120,180,0.2)] transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.05] hover:brightness-110 hover:shadow-[0_20px_50px_-4px_rgba(140,120,180,0.5)] dark:bg-[#3d3552] dark:text-[#e0ddf0] dark:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_20px_50px_-4px_rgba(140,120,180,0.35)] ${className}`}
         style={{
           width: 500,
           minHeight: 90,
@@ -117,7 +117,7 @@ export function FloatingCard(props: FloatingCardProps) {
 
   return (
     <div
-      className={`flex items-center justify-center gap-3 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg ${className}`}
+      className={`pointer-events-auto cursor-pointer flex items-center justify-center gap-3 text-base font-semibold text-white transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.06] hover:brightness-125 ${className}`}
       style={{
         width: s.width,
         height: s.height,
@@ -128,6 +128,14 @@ export function FloatingCard(props: FloatingCardProps) {
         boxShadow: s.shadow,
         transform: `rotate(${rotation}deg)`,
         ...style,
+      }}
+      onMouseEnter={(e) => {
+        const el = e.currentTarget;
+        const shadowColor = s.shadow?.match(/rgba?\([^)]+\)/)?.[0] ?? 'rgba(0,0,0,0.3)';
+        el.style.boxShadow = `0 25px 60px ${shadowColor}, 0 0 30px ${shadowColor}`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = s.shadow ?? '';
       }}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={2} />
