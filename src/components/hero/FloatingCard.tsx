@@ -79,21 +79,24 @@ export function FloatingCard(props: FloatingCardProps) {
       <div
         className={`flex items-center gap-[12px] rounded-[40px] bg-[#938ce2] px-[14px] py-[12px] text-[#1F1F1F] shadow-[0_12px_30px_rgba(140,120,180,0.2)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_32px_-4px_rgba(140,120,180,0.3)] dark:bg-[#3d3552] dark:text-[#e0ddf0] dark:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)] ${className}`}
         style={{
-          width: 400,
+          width: 500,
           minHeight: 90,
           transform: `rotate(${rotation}deg)`,
           ...style,
         }}
       >
         {/* Avatar with orange left accent */}
-        <div className="relative shrink-0">
-          <div className="absolute -left-[6px] top-[2px] bottom-[2px] w-[3px] rounded-full bg-[#F97316]" />
+        <div className="relative shrink-0 pl-[6px]">
+          {/* Red Accent Line */}
+          <div className="absolute left-0 top-[2px] bottom-[2px] w-[3px] rounded-full bg-[#F97316]" />
+
+          {/* Avatar with spacing from line */}
           <Image
             src={avatarSrc}
             alt=""
             width={42}
             height={42}
-            className="h-[42px] w-[42px] shrink-0 rounded-full object-cover bg-[#999]"
+            className="ml-[8px] h-[42px] w-[42px] shrink-0 rounded-full object-cover bg-[#999]"
           />
         </div>
         <div className="min-w-0 flex-1">
