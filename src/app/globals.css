@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f6fa;
+  --foreground: #4a3c6c;
+  --muted: #8d8ba7;
+  --heading-accent: #6b5b95;
+  --heading-emphasis: #4a3c6c;
+  --blob: #e4e6f2;
+}
+
+.dark {
+  --background: #0f0e14;
+  --foreground: #e8e6f0;
+  --muted: #9a98b0;
+  --heading-accent: #b8b0d0;
+  --heading-emphasis: #e0ddf0;
+  --blob: rgba(100, 90, 160, 0.15);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-fade-in-float {
+  animation:
+    fade-in 0.5s ease-out forwards,
+    float 3.5s 0.6s ease-in-out infinite;
+}
+
+.animate-text-in {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-text-in-delay {
+  animation: fade-in-up 0.6s 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-subtext-in {
+  animation: fade-in-up 0.6s 0.35s ease-out forwards;
+  opacity: 0;
+}

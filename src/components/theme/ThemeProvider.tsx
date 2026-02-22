@@ -1,0 +1,12 @@
+"use client";
+
+import { useEffect } from "react";
+import { getTheme } from "@/lib/theme";
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    const theme = getTheme();
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, []);
+  return <>{children}</>;
+}
