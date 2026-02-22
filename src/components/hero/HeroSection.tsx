@@ -55,7 +55,7 @@ export function HeroSection() {
         <div className="absolute inset-0 hidden lg:block pointer-events-none top-14">
 
           {/* BILLING */}
-          <div className="absolute top-[250px] right-[30px]">
+          <div className="absolute top-[230px] right-[100px]">
             <FloatingCard
               size="billing"
               rotation={14}
@@ -65,20 +65,20 @@ export function HeroSection() {
           </div>
 
           {/* MATTERS */}
-          <div className="absolute top-[400px] left-[-50px]">
+          <div className="absolute top-[350px] left-[-0px]">
             <FloatingCard
               size="matters"
-              rotation={-10}
+              rotation={-18}
               icon={Gavel}
               label="Matters"
             />
           </div>
 
           {/* PORTAL */}
-          <div className="absolute top-[350px] left-[450px]">
+          <div className="absolute top-[400px] left-[450px]">
             <FloatingCard
               variant="portal"
-              rotation={2}
+              rotation={3}
               avatarSrc={PORTAL_AVATAR}
               title="John Doe - Portal"
               message="Hey! Could you please review..."
@@ -97,7 +97,7 @@ export function HeroSection() {
           </div>
 
           {/* DOCUMENTS */}
-          <div className="absolute top-[510px] right-[-300px]">
+          <div className="absolute top-[510px] right-[-200px]">
             <FloatingCard
               size="documents"
               rotation={-11}
