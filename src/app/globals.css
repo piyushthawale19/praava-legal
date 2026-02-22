@@ -152,3 +152,40 @@ body {
   opacity: 0;
   animation: paragraph-reveal 0.7s 2.1s ease-out forwards;
 }
+
+/* ── Floating card hover shimmer ─────────────────────────── */
+.floating-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 45%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.15) 55%,
+    transparent 60%
+  );
+  background-size: 250% 100%;
+  background-position: 200% 0;
+  transition: none;
+  border-radius: inherit;
+}
+
+.floating-card:hover .shimmer-overlay {
+  animation: shimmer-sweep 0.8s ease-out forwards;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
