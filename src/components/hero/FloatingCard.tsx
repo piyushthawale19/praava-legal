@@ -77,7 +77,7 @@ export function FloatingCard(props: FloatingCardProps) {
     const { rotation, avatarSrc, title, message, meta, className = "", style } = props;
     return (
       <div
-        className={`flex items-center gap-[12px] rounded-[40px] bg-[#DEDCF4] px-[14px] py-[12px] text-[#1F1F1F] shadow-[0_12px_30px_rgba(140,120,180,0.2)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_32px_-4px_rgba(140,120,180,0.3)] dark:bg-[#3d3552] dark:text-[#e0ddf0] dark:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)] ${className}`}
+        className={`flex items-center gap-[12px] rounded-[40px] bg-[#938ce2] px-[14px] py-[12px] text-[#1F1F1F] shadow-[0_12px_30px_rgba(140,120,180,0.2)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_32px_-4px_rgba(140,120,180,0.3)] dark:bg-[#3d3552] dark:text-[#e0ddf0] dark:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)] ${className}`}
         style={{
           width: 400,
           minHeight: 90,
@@ -101,7 +101,7 @@ export function FloatingCard(props: FloatingCardProps) {
           <p className="truncate text-[11px] text-[#6D6A7E] leading-[1.4] dark:text-[#9a98b0]">
             {message}
           </p>
-          <p className="mt-[2px] text-[11px] font-semibold text-[#F97316] dark:text-[#F97316]">
+          <p className="mt-[2px] text-[11px] font-semibold text-[#756de0] dark:text-[#818ce9]">
             {meta}
           </p>
         </div>
